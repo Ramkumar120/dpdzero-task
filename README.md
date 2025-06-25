@@ -12,7 +12,9 @@ Internet connection
 
 
 📁 Folder Structure:
-![WhatsApp Image 2025-06-25 at 9 56 43 AM](https://github.com/user-attachments/assets/a53129a8-5593-45c1-b1ed-d5282ac2e905)
+![folderstructure](https://github.com/user-attachments/assets/dddd0be0-669a-4eee-9e79-2b3bf11079b1)
+
+
 
 
 🧪 Step-by-step Setup:
