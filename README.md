@@ -12,44 +12,25 @@ Internet connection
 
 
 📁 Folder Structure:
+![WhatsApp Image 2025-06-25 at 9 56 43 AM](https://github.com/user-attachments/assets/a53129a8-5593-45c1-b1ed-d5282ac2e905)
 
-dpdzero-task/
-│
-├── docker-compose.yml            
-├── Jenkinsfile                    
-├── README.md                     
-│
-├── nginx/
-│   ├── nginx.conf                 
-│   └── Dockerfile                
-│
-├── service_1/                     
-│   ├── main.go                    
-│   └── Dockerfile                
-│
-├── service_2/                     
-│   ├── app.py                     
-│   └── Dockerfile                
-│
-└── nginx-logs-volume/            # Mounted volume for storing Nginx logs
----
 
 🧪 Step-by-step Setup:
 
 1. Clone the project:
 
-git clone https://github.com/Ramkumar120/dpdzero-task.git
+               **git clone https://github.com/Ramkumar120/dpdzero-task.git**
 
-cd dpdzero-task
+               **cd dpdzero-task**
 
 2. Build and Start All Containers:
 
-docker compose down        # Clean up any previous setup
-docker compose up -d --build 
+                **sudo docker compose down**        # Clean up any previous setup
+                **sudo docker compose up -d --build** 
 
 3. Verify Everything is Running:
 
-docker ps
+                **sudo docker ps**
 
 Look for 3 containers: nginx, service1, service2
 Check for (healthy) in status
@@ -58,20 +39,20 @@ Check for (healthy) in status
 
 Test Go app:
 
-curl http://localhost/service1/hello
+                **curl http://localhost/service1/hello**
 
 Test Python app:
 
-curl http://localhost/service2/hello
+                **curl http://localhost/service2/hello**
 
 Health Check Endpoints:
 
-curl http://localhost/service1/health
-curl http://localhost/service2/health
+                **curl http://localhost/service1/health**
+                **curl http://localhost/service2/health**
 
 🛑 Stop and Clean:
 
-docker compose down
+                **sudo docker compose down**
 
 📌 Extras:
 
@@ -81,9 +62,13 @@ docker compose down
 
 3. Uses bridge networking only (no host networking)
 
-4. Created Jenkins pipeline to automate this entire process . Whenever a code push to the github, jenkins will automatically trigger the pipeline using webhook.
+4. Created health check endpoints /health for both service1 and service2. 
 
-5. Created health check endpoints /health for both service1 and service2.
+5. Created Jenkins pipeline to automate this entire process . Whenever a code push to the github, jenkins will automatically trigger the pipeline using webhook.
+   ![WhatsApp Image 2025-06-25 at 10 11 54 AM (1)](https://github.com/user-attachments/assets/6cf0ebef-173b-400a-8ce8-8a3950da1d34)
+![WhatsApp Image 2025-06-25 at 10 11 54 AM](https://github.com/user-attachments/assets/fa4e6955-7bbe-4643-b4ca-9b9f76b447a7)
+
+
 
 🌐 HOW ROUTING WORKS IN THIS PROJECT:
 
