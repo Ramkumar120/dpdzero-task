@@ -19,18 +19,18 @@ Internet connection
 
 1. Clone the project:
 
-               **git clone https://github.com/Ramkumar120/dpdzero-task.git**
+               git clone https://github.com/Ramkumar120/dpdzero-task.git
 
-               **cd dpdzero-task**
+               cd dpdzero-task
 
 2. Build and Start All Containers:
 
-                **sudo docker compose down**        # Clean up any previous setup
-                **sudo docker compose up -d --build** 
+                sudo docker compose down        # Clean up any previous setup
+                sudo docker compose up -d --build 
 
 3. Verify Everything is Running:
 
-                **sudo docker ps**
+                sudo docker ps
 
 Look for 3 containers: nginx, service1, service2
 Check for (healthy) in status
@@ -39,20 +39,20 @@ Check for (healthy) in status
 
 Test Go app:
 
-                **curl http://localhost/service1/hello**
+                curl http://localhost/service1/hello
 
 Test Python app:
 
-                **curl http://localhost/service2/hello**
+                curl http://localhost/service2/hello
 
 Health Check Endpoints:
 
-                **curl http://localhost/service1/health**
-                **curl http://localhost/service2/health**
+                curl http://localhost/service1/health
+                curl http://localhost/service2/health
 
 🛑 Stop and Clean:
 
-                **sudo docker compose down**
+                sudo docker compose down
 
 📌 Extras:
 
