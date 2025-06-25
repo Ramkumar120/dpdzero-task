@@ -12,7 +12,8 @@ Internet connection
 
 
 📁 Folder Structure:
-![folderstructure](https://github.com/user-attachments/assets/dddd0be0-669a-4eee-9e79-2b3bf11079b1)
+![image](https://github.com/user-attachments/assets/65fb6e5b-6e4a-4a68-8e7d-1d9d63ca8719)
+
 
 
 
